@@ -1,0 +1,82 @@
+/* RESET PADDING AND MARGING */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+
+/* TYPOGRAPHY */
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0,0,0,.5);
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgba(0,0,0,.7)
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(0,0,0,.7)
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0,0,0,.7)
+}
+
+a {
+    text-decoration: none;
+}
+.btns {
+    display: flex;
+}
+.btns li a {
+    font-weight: 600;
+    color: white;
+    margin: 0 .5rem;
+}
+
+li .mac {
+    padding: 1rem 1.5rem;   
+    background-color: #6074FF;
+    border-radius: 30px;
+    box-shadow:  2px 2px 0px #4556c8;
+}
+
+li .ios {
+    padding: 1rem 1.5rem;   
+    background-color: #26BCA4;
+    border-radius: 30px;
+    box-shadow:  2px 2px 0px #1d9985;
+}
+
+.site-map ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    list-style: none;
+}
+
+.site-map ul li {   
+    padding: .5rem 1.25rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #F5F6F8;
+}
