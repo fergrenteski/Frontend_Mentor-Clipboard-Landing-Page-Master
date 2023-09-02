@@ -8,7 +8,21 @@
 body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 18px;
+    scrollbar-color: #26BCA4;
 }
+
+*::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #26BCA4;
+    border-radius: 20px;
+  }
 
 /* TYPOGRAPHY */
 
@@ -41,14 +55,23 @@ h3 {
 a {
     text-decoration: none;
 }
+
+footer ul li a:hover {
+    color: #26BCA4;
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgba(0,0,0,.5);
+}
 .btns {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin: 1rem 0;
     margin-top: 3rem;
     margin-bottom: 8rem;
+    align-content: center;
 }
 .btns li a {
     font-weight: 600;
@@ -56,18 +79,37 @@ a {
     margin: 0 .5rem;
 }
 
+.mac:hover {
+    padding: .75rem 1.5rem;   
+    background-color: #4556c8;
+    border-radius: 30px;
+    box-shadow:  2px 2px 0px #4556c8;
+}
+
 li .mac {
-    padding: 1rem 1.5rem;   
+    padding: .75rem 1.5rem;   
     background-color: #6074FF;
     border-radius: 30px;
     box-shadow:  2px 2px 0px #4556c8;
 }
 
 li .ios {
-    padding: 1rem 1.5rem;   
+    padding: .75rem 1.5rem;   
     background-color: #26BCA4;
     border-radius: 30px;
     box-shadow:  2px 2px 0px #1d9985;
+}
+
+.ios:hover {
+    padding: .75rem 1.5rem;   
+    background-color: #1d9985;
+    border-radius: 30px;
+    box-shadow:  2px 2px 0px #1d9985;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: .2s;
 }
 
 .site-map ul {
@@ -79,6 +121,9 @@ li .ios {
 
 .site-map ul li {   
     padding: .5rem 1.25rem;
+    text-align: start;
+    font-weight: 400;
+    color: black;
 }
 
 /* CONTAINERS */
@@ -95,13 +140,19 @@ li .ios {
     background-repeat: no-repeat;
 }
 footer {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     width: 100%;
     background-color: #F5F6F8;
+    margin: 0 auto;
+    text-align: center;
 }
 
+footer img {
+    align-self: center;
+    margin: 0 auto;
+}
 .small {
     width: 60%;
     margin: 0 auto;
@@ -117,9 +168,36 @@ footer {
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: inline-flex;
     margin-top: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid div {
+    display: inline-block;
+    margin: 2rem;
+
+}
+.grid img {
+    height:40px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.grid header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+}
+.grid div p {
+    padding: 0 2rem;
 }
 .left img{
     width: 100%;
@@ -136,10 +214,170 @@ footer {
 }
 
 .title-2 {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .img {
     width: 100%;
     margin-top: 6rem;
+}
+
+.images {
+    width: 80%;
+    display: flex;
+    gap: 4rem;
+    margin: 4rem auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.images img {
+    min-width: none;
+}
+
+.sociais img{
+    padding: .5rem;
+}
+
+.download header p {
+    width: 40%;
+    margin: 2rem auto;
+}
+
+.logo-footer {
+    width: 50px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+@media screen and (max-width:1080px) {
+    .images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr; 
+        align-content: center;
+    }
+
+    .site-map ul li {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width:850px) {
+    .btns {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .btns li a{
+        margin: 100px 0;
+    }
+
+    .grid-2 {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .grid {
+        width: 80%;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    .grid div p {
+        padding: 0 2rem;
+    }
+
+    .grid header {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .grid header p {
+        padding: 0 2rem;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 3rem auto;
+    }
+    .images img {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    
+
+    .btns {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .btns li a{
+        margin: 100px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .grid div p {
+        padding: 0;
+    }
+
+    .download header p{
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site-map ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .main-header {
+        background-image: url("images/bg-header-mobile.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .logo-footer {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .site-map ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .sociais {
+        margin-top: 2rem;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+     }
 }
